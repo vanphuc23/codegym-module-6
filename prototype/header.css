@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+#nav {
+    font-size: 13px;
+}
+
+#nav .nav_choose {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+#nav .nav_choose:hover{
+    color: orange;
+}
+
+#nav .nav_choose .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transform: translateX(-18%);
+}
+
+#nav .nav_choose .subnav li {
+    display: block;
+    line-height: 30px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#nav .nav_choose:hover .subnav {
+    display: block;
+    color: black;
+}
+
+#nav .nav_choose .subnav li:hover {
+    color: orange;
+    border-left: 5px solid orange;
+    transition: 0.2s;
+    background-color: #fee7d9;
+}
