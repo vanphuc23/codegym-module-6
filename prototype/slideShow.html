@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous">
+<link rel="stylesheet" href="header.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CNunito:300,300i,400,400i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+<body>
+<div class="body-slide-show">
+    <div class="slide-show">
+        <div class="list-iamges">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/21/demon-slayer-kimetsu-no-yaiba-on-stage-mugen-train-arc-4-1_1710999294803.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/21/gxk-2048_1710996917814.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/14/sang-den-3_1710397716255.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/2/15/very-happy-day-digital-2048x682_1707987204574.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/2/8/2048x682_1707364876796.jpg" alt="">
+        </div>
+        <div class="btns">
+            <div class="btn-left btn"></div>
+            <div class="btn-right btn"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+<script>
+    const listImage = document.querySelector('.list-iamges');
+    const imgs = document.getElementsByTagName('img');
+    const length = imgs.length;
+    let current = 0;
+
+    setInterval(()=> {
+        if(current == length-3) {
+            current = 0;
+            let width = imgs[0].offsetWidth;
+            listImage.style.transform = `translateX(${width * 1 * current}px)`;
+        } else {
+            current++;
+            let width = imgs[0].offsetWidth;
+            listImage.style.transform = `translateX(${width * -1 * current}px)`;
+        }
+    },1000)
+</script>
+</html>
