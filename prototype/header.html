@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="header.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CNunito:300,300i,400,400i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <body>
 
 <!--header-->
@@ -80,135 +81,157 @@
 
 <!--header-->
 
+<!--slideshow-->
+
+<div class="body-slide-show">
+    <div class="slide-show">
+        <div class="list-iamges">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/21/demon-slayer-kimetsu-no-yaiba-on-stage-mugen-train-arc-4-1_1710999294803.jpg"
+                 alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/21/gxk-2048_1710996917814.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/14/sang-den-3_1710397716255.jpg" alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/2/15/very-happy-day-digital-2048x682_1707987204574.jpg"
+                 alt="">
+            <img src="https://cdn.galaxycine.vn/media/2024/2/8/2048x682_1707364876796.jpg" alt="">
+        </div>
+        <div class="btns">
+            <div class="btn-left btn2"><i class='bx bx-chevron-left'></i></div>
+            <div class="btn-right btn2"><i class='bx bx-chevron-right'></i></div>
+        </div>
+    </div>
+</div>
+
+<!--slideshow-->
+
 <!--list-->
 
-<!--<div class="container">-->
-<!--    <div class="title-list" style="margin-bottom: 25px">-->
-<!--        <ul class="title">-->
-<!--            <li style="display: flex"><span></span> <h4>PHIM</h4></li>-->
-<!--            <li class="title-line" onclick="changeContent(this)">Đang chiếu</li>-->
-<!--            <li class="title-line" onclick="changeContent(this)">Sắp chiếu</li>-->
-<!--            <li class="title-line" onclick="changeContent(this)">Phim IMAX</li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--    <div id="wrapper">-->
-<!--        <ul class="videos">-->
-<!--            <li>-->
-<!--                <div class="video-item">-->
-<!--                    <div class="video-top">-->
-<!--                        <a href="#" class="video-thumb">-->
-<!--                            <img src="../photo/01.jpg" alt=""/>-->
-<!--                        </a>-->
-<!--                        <div style="text-align: center">-->
-<!--                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="video-info">-->
-<!--                        <a href="#" class="video-name">Mai</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="video-item">-->
-<!--                    <div class="video-top">-->
-<!--                        <a href="#" class="video-thumb">-->
-<!--                            <img src="../photo/02.jpg" alt=""/>-->
-<!--                        </a>-->
-<!--                        <div style="text-align: center">-->
-<!--                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="video-info">-->
-<!--                        <a href="#" class="video-name">Kung Fu Panda 4</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="video-item">-->
-<!--                    <div class="video-top">-->
-<!--                        <a href="#" class="video-thumb">-->
-<!--                            <img src="../photo/03.jpg" alt=""/>-->
-<!--                        </a>-->
-<!--                        <div style="text-align: center">-->
-<!--                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="video-info">-->
-<!--                        <a href="#" class="video-name">Sáng Đèn</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--                <div class="video-item">-->
-<!--                    <div class="video-top">-->
-<!--                        <a href="#" class="video-thumb">-->
-<!--                            <img src="../photo/04.jpg" alt=""/>-->
-<!--                        </a>-->
-<!--                        <div style="text-align: center">-->
-<!--                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="video-info">-->
-<!--                        <a href="#" class="video-name">Godzilla x Kong: Đế Chế Mới</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
+<div class="container">
+    <div class="title-list" style="margin-bottom: 25px">
+        <ul class="title">
+            <li style="display: flex"><span></span> <h4>PHIM</h4></li>
+            <li class="title-line" onclick="changeContent(this)">Đang chiếu</li>
+            <li class="title-line" onclick="changeContent(this)">Sắp chiếu</li>
+            <li class="title-line" onclick="changeContent(this)">Phim IMAX</li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <ul class="videos">
+            <li>
+                <div class="video-item">
+                    <div class="video-top">
+                        <a href="#" class="video-thumb">
+                            <img src="../photo/01.jpg" alt=""/>
+                        </a>
+                        <div style="text-align: center">
+                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <a href="#" class="video-name">Mai</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="video-item">
+                    <div class="video-top">
+                        <a href="#" class="video-thumb">
+                            <img src="../photo/02.jpg" alt=""/>
+                        </a>
+                        <div style="text-align: center">
+                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <a href="#" class="video-name">Kung Fu Panda 4</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="video-item">
+                    <div class="video-top">
+                        <a href="#" class="video-thumb">
+                            <img src="../photo/03.jpg" alt=""/>
+                        </a>
+                        <div style="text-align: center">
+                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <a href="#" class="video-name">Sáng Đèn</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="video-item">
+                    <div class="video-top">
+                        <a href="#" class="video-thumb">
+                            <img src="../photo/04.jpg" alt=""/>
+                        </a>
+                        <div style="text-align: center">
+                            <a href="#" class="buy-now"><i class="fa-solid fa-ticket"></i> Mua vé</a>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <a href="#" class="video-name">Godzilla x Kong: Đế Chế Mới</a>
+                    </div>
+                </div>
+            </li>
 
-<!--        </ul>-->
+        </ul>
 
-<!--        <div class="row" style="margin: 20px 0">-->
-<!--            <div class="col-md-12 d-flex justify-content-center">-->
-<!--                <button class="btn btn-outline-primary">Xem thêm  <i class="fa-solid fa-angles-right"></i></button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+        <div class="row" style="margin: 20px 0">
+            <div class="col-md-12 d-flex justify-content-center">
+                <button class="btn btn-outline-primary">Xem thêm  <i class="fa-solid fa-angles-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--list-->
 
 <!--footer-->
 
-<!--<footer>-->
-<!--    <div class="container">-->
-<!--        <div class="text-footer">-->
-<!--            <div class="text-footer-big"><h3>GIỚI THIỆU</h3>-->
-<!--                <ul class="text-footer-small">-->
-<!--                    <li><a href="#">Về Chúng Tôi</a></li>-->
-<!--                    <li><a href="#">Thỏa Thuận Sử Dụng</a></li>-->
-<!--                    <li><a href="#">Quy Chế Hoạt Động</a></li>-->
-<!--                    <li><a href="#">Chính Sách Bảo Mật</a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="text-footer-big"><h3>GÓC ĐIỆN ẢNH</h3>-->
-<!--                <ul class="text-footer-small">-->
-<!--                    <li><a href="#">Thể Loại Phim</a></li>-->
-<!--                    <li><a href="#">Bình Luận Phim</a></li>-->
-<!--                    <li><a href="#">Blog Điện Ảnh</a></li>-->
-<!--                    <li><a href="#">Phim Hay Tháng</a></li>-->
-<!--                    <li><a href="#">Phim IMAX</a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class="text-footer-big"><h3>HỖ TRỢ</h3>-->
-<!--                <ul class="text-footer-small">-->
-<!--                    <li><a href="#">Góp Ý</a></li>-->
-<!--                    <li><a href="#">Sale & Services</a></li>-->
-<!--                    <li><a href="#">Rạp / Giá vé</a></li>-->
-<!--                    <li><a href="#">Tuyển Dụng</a></li>-->
-<!--                    <li><a href="#">FAQ</a></li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div>-->
+<footer>
+    <div class="container">
+        <div class="text-footer">
+            <div class="text-footer-big"><h3>GIỚI THIỆU</h3>
+                <ul class="text-footer-small">
+                    <li><a href="#">Về Chúng Tôi</a></li>
+                    <li><a href="#">Thỏa Thuận Sử Dụng</a></li>
+                    <li><a href="#">Quy Chế Hoạt Động</a></li>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                </ul>
+            </div>
+            <div class="text-footer-big"><h3>GÓC ĐIỆN ẢNH</h3>
+                <ul class="text-footer-small">
+                    <li><a href="#">Thể Loại Phim</a></li>
+                    <li><a href="#">Bình Luận Phim</a></li>
+                    <li><a href="#">Blog Điện Ảnh</a></li>
+                    <li><a href="#">Phim Hay Tháng</a></li>
+                    <li><a href="#">Phim IMAX</a></li>
+                </ul>
+            </div>
+            <div class="text-footer-big"><h3>HỖ TRỢ</h3>
+                <ul class="text-footer-small">
+                    <li><a href="#">Góp Ý</a></li>
+                    <li><a href="#">Sale & Services</a></li>
+                    <li><a href="#">Rạp / Giá vé</a></li>
+                    <li><a href="#">Tuyển Dụng</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
 
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="Footer_footer_bottom">-->
-<!--            <div class="footer_bottom">-->
-<!--                <h3>CÔNG TY CỔ PHẦN PHIM THIÊN NGÂN</h3>-->
-<!--                <p>Toà nhà Bitexco Nam Long, 63A Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
+            </div>
+        </div>
+        <div class="Footer_footer_bottom">
+            <div class="footer_bottom">
+                <h3>CÔNG TY CỔ PHẦN PHIM THIÊN NGÂN</h3>
+                <p>Toà nhà Bitexco Nam Long, 63A Võ Văn Tần, Phường 6, Quận 3, Tp. Hồ Chí Minh, Việt Nam</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <!--footer-->
 
@@ -251,25 +274,72 @@
 
 <!--header-->
 
+<!--slideshow-->
+
+<script>
+    const listImage = document.querySelector('.list-iamges');
+    const imgs = document.querySelectorAll('.list-iamges img');
+    const btnLeft = document.querySelector('.btn-left');
+    const btnRight = document.querySelector('.btn-right');
+    const length = imgs.length;
+    let current = 0;
+
+    const handleChangeSlide = () => {
+        if (current === length - 1) {
+            current = 0;
+            listImage.style.transform = `translateX(0px)`;
+        } else {
+            current++;
+            let width = imgs[0].offsetWidth;
+            listImage.style.transform = `translateX(${width * -1 * current}px)`;
+        }
+    }
+
+    let handleEventChangeSlide = setInterval(handleChangeSlide, 4000)
+
+    btnRight.addEventListener('click', () => {
+        clearInterval(handleEventChangeSlide);
+        handleChangeSlide();
+        handleEventChangeSlide = setInterval(handleChangeSlide, 4000);
+    })
+
+    btnLeft.addEventListener('click', () => {
+        clearInterval(handleEventChangeSlide);
+        if (current === 0) {
+            current = length - 1;
+            let width = imgs[0].offsetWidth;
+            listImage.style.transform = `translateX(${width * -1 * current}px)`;
+        } else {
+            current--;
+            let width = imgs[0].offsetWidth;
+            listImage.style.transform = `translateX(${width * -1 * current}px)`;
+        }
+        handleEventChangeSlide = setInterval(handleChangeSlide, 4000)
+    })
+
+</script>
+
+<!--slideshow-->
+
 <!--list-->
 
-<!--<script>-->
-<!--    var activeLi = null;-->
+<script>
+    var activeLi = null;
 
-<!--    function changeContent(element) {-->
-<!--        if (activeLi !== null) {-->
-<!--            activeLi.classList.remove("active");-->
-<!--        }-->
-<!--        element.classList.add("active");-->
-<!--        activeLi = element;-->
-<!--    }-->
+    function changeContent(element) {
+        if (activeLi !== null) {
+            activeLi.classList.remove("active");
+        }
+        element.classList.add("active");
+        activeLi = element;
+    }
 
-<!--    // Set default active li-->
-<!--    document.addEventListener("DOMContentLoaded", function() {-->
-<!--        var defaultLi = document.querySelector(".title-list .title-line");-->
-<!--        changeContent(defaultLi);-->
-<!--    });-->
-<!--</script>-->
+    // Set default active li
+    document.addEventListener("DOMContentLoaded", function() {
+        var defaultLi = document.querySelector(".title-list .title-line");
+        changeContent(defaultLi);
+    });
+</script>
 
 <!--list-->
 
