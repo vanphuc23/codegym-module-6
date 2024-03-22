@@ -30,6 +30,67 @@ nav {
     color: orange;
 }
 
+#nav .nav_choose .title-list-film {
+    display: none;
+    width: 700px;
+    position: absolute;
+    list-style-type: none;
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(-8%);
+    z-index: 1;
+}
+
+#nav .nav_choose:hover .title-list-film {
+    display: block;
+}
+
+#nav .nav_choose .title-list-film .title-subnav {
+    padding-top: 10px;
+}
+
+#nav .nav_choose .title-list-film .title-subnav span {
+    border-left: 5px solid orange;
+    padding-right: 5px;
+}
+
+#nav .nav_choose .title-list-film .title-subnav a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    font-weight: lighter;
+}
+
+#nav .nav_choose .title-list-film .title-subnav:hover a {
+    color: orange;
+}
+
+#nav .nav_choose .title-list-film ul.subnav-video {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#nav .nav_choose .title-list-film ul.subnav-video li {
+    padding: 15px 0;
+}
+
+#nav .nav_choose .title-list-film ul.subnav-video a {
+    display: block;
+}
+
+#nav .nav_choose .title-list-film ul.subnav-video img {
+    height: auto;
+    max-width: 150px;
+}
+
+#nav .nav_choose .title-list-film ul.subnav-video li:hover {
+    opacity: 80%;
+}
+
 #nav .nav_choose .subnav {
     display: none;
     min-width: 160px;
