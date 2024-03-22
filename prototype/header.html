@@ -29,7 +29,11 @@
                             <img src="https://www.galaxycine.vn/_next/static/media/btn-ticket.42d72c96.webp" alt=""
                                  height="36px" width="100px">
                         </a>
-                        <li class="nav_choose">Phim <i class="fa-solid fa-angle-down"></i></li>
+                        <li class="nav_choose">Phim <i class="fa-solid fa-angle-down"></i>
+                            <div class="titlle-list-film">
+                                <div class="title-subnav"><a href="#">Phim đang chiếu</a></div>
+                            </div>
+                        </li>
                         <li class="nav_choose">Góc Điện Ảnh <i class="fa-solid fa-angle-down"></i>
                             <ul class="subnav">
                                 <li><a href="#">Thể loại phim</a></li>
@@ -232,6 +236,7 @@
             document.removeEventListener("click", hideInputOnClickOutside);
         }
     }
+
     function expandInput() {
         var input = document.getElementById("write_input");
         input.classList.add("expanded");
