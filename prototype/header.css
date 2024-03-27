@@ -359,7 +359,7 @@ ul.videos li .video-info .video-name {
 /*footer*/
 
 footer {
-    min-height: 50vh;
+    height: auto;
     width: 100%;
     background-color: #333333;
 }
@@ -393,6 +393,27 @@ footer {
     text-decoration: none;
     color: #c9c9c0;
     font-size: 14px;
+}
+
+.list-icon-footer {
+    display: flex;
+}
+
+.list-icon-footer .icon-footer {
+    width: 40px;
+    padding: 0;
+}
+
+.list-icon-footer li i {
+    display: block;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+}
+
+.list-icon-footer li i:hover {
+    font-size: 35px;
+    transition: 0.3s ease-in-out;
 }
 
 .text-footer-small li a:hover {
