@@ -359,7 +359,7 @@ ul.videos li .video-info .video-name {
 /*footer*/
 
 footer {
-    height: auto;
+    min-height: 50vh;
     width: 100%;
     background-color: #333333;
 }
@@ -407,13 +407,13 @@ footer {
 .list-icon-footer li i {
     display: block;
     font-size: 30px;
-    transition: 0.3s ease-in-out;
     text-align: center;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .list-icon-footer li i:hover {
-    font-size: 35px;
-    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
 }
 
 .text-footer-small li a:hover {
