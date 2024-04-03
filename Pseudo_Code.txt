@@ -1,0 +1,43 @@
+6.5.1.1. Danh Sách Phim – Xem danh sách phim
+
+BEGIN PROGRAM							
+          IMovieRepository							
+           List<Movie> findAllShowingMovie()							
+               Get database connection							
+              Select SQL:
+		SELECT * FROM movie												
+              	Execute SQL						
+             	Close database connection						
+							
+IMovieService						
+	List<Movie> findAllShowingMovie();					
+MovieController						
+	Inject prescriptionService					
+	call method List<Prescription> findAll()					
+	If result = null then return instance of ResponseEntity with status code 404 NOT FOUND only					
+	else return instance of ResponseEntity with result in entity body and status code 200 OK					
+						
+END PROGRAM							
+
+
+6.5.1.3. Danh sách Phim – Tìm kiếm Phim
+
+BEGIN PROGRAM							
+            IMovieRepository							
+                 List<Movie> findMovieByName(name)							
+          Get database connection							
+              Select SQL:							
+		SELECT * FROM movie WHERE movie_name like ?					
+              	Execute SQL						
+             	Close database connection						
+							
+         MovieController							
+               	Inject iMovieService						
+	findMovieByName(name)						
+	If customer name is found in database						
+	call findMovieByName(name) through iMovieService variable						
+	redirect to page movieList and return search list						
+	return OK status in Restful						
+	Else return message “Movie not found”						
+	return OK status in Restful						
+END PROGRAM													

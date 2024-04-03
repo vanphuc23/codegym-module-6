@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown p {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.dropdown .option {
+    position: absolute;
+    top:30px;
+    overflow: hidden;
+    display: none;
+}
+
+.dropdown.active .option {
+    display: block;
+}

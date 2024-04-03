@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+<div class="dropdown">
+    <p class="textBox">Phim</p>
+    <div class="option">
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JS</div>
+    </div>
+</div>
+</body>
+<script>
+    let dropdown = document.querySelector('.dropdown');
+    dropdown.onclick=function () {
+        dropdown.classList.toggle('active');
+    }
+</script>
+</html>
