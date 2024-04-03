@@ -607,13 +607,13 @@ ul.videos li .video-info .video-name {
     font-weight: bolder;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     ul.videos li .video-top:hover .list-btn {
         display: none;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
 
     ul.videos li .video-top:hover .list-btn {
         display: none;
@@ -708,7 +708,7 @@ footer {
     margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 980px) {
     .text-footer {
         padding: 20px 0;
         display: grid;
