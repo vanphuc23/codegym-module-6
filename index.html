@@ -18,10 +18,10 @@
 
 <!--header-->
 
-<header>
+<header id="header">
     <div class="container">
         <nav>
-            <a href="">
+            <a href="#">
                 <img src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/60493220_2727687037245858_4681446895883649024_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQta9GJxB34AX9jKOQt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=t&oh=00_AfDIiOAL8aQzxMBnQl_NQzKhwR18N4EwMBV_Lm6Cx02PXw&oe=66223EB8"
                      alt="galaxy cinema" height="100px" width="125px">
             </a>
@@ -35,6 +35,10 @@
                         </a>
                         <span class="menu">
                                 <li class="nav_choose">
+                                    <div class="img-responsive">
+                                    <img src="https://scontent.fdad1-4.fna.fbcdn.net/v/t1.6435-9/60493220_2727687037245858_4681446895883649024_n.png?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=IQta9GJxB34AX9jKOQt&_nc_ht=scontent.fdad1-4.fna&cb_e2o_trans=t&oh=00_AfDIiOAL8aQzxMBnQl_NQzKhwR18N4EwMBV_Lm6Cx02PXw&oe=66223EB8"
+                                         alt="galaxy cinema" height="150px" width="175px">
+                                    </div>
                                     <div class="search-input">
                                         <input type="text" name="q" class="form-search" placeholder="Tìm Kiếm ">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
@@ -44,7 +48,14 @@
                                         </svg>
                                     </div>
                                 </li>
-                                <li class="nav_choose">Phim <i class="fa-solid fa-angle-down"></i>
+                                <li class="nav_choose"> <div onclick="toggleSubnav(this)" class="name-list" style="display: inline-block">Phim <i
+                                        class="fa-solid fa-angle-down"></i></div>
+                                    <div class="option">
+                                        <ul class="click-subnav">
+                                            <li class="dropdown-film"><a href="#">Phim đang chiếu</a></li>
+                                            <li class="dropdown-film"><a href="#">Phim sắp chiếu</a></li>
+                                        </ul>
+                                    </div>
                                     <div class="title-list-film">
                                         <div class="container title-subnav"><span></span><a href="#">Phim đang chiếu</a></div>
                                         <ul class="container subnav-video">
@@ -62,15 +73,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="option">
-                                        <ul>
-                                            <li class="dropdown-film"><a href="#">Phim đang chiếu</a></li>
-                                            <li class="dropdown-film"><a href="#">Phim sắp chiếu</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
-                                <li class="nav_choose">Góc Điện Ảnh <i class="fa-solid fa-angle-down"></i>
-                                    <ul class="subnav">
+                                <li class="nav_choose"> <div onclick="toggleSubnav(this)" class="name-list" style="display: inline-block">Góc Điện Ảnh <i
+                                        class="fa-solid fa-angle-down"></i></div>
+                                    <ul class="subnav click-subnav">
                                         <li><a href="#">Thể loại phim</a></li>
                                         <li><a href="#">Diễn viên</a></li>
                                         <li><a href="#">Đạo diễn</a></li>
@@ -78,14 +84,37 @@
                                         <li><a href="#">Blog điện ảnh</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav_choose">Sự kiện <i class="fa-solid fa-angle-down"></i>
-                                    <ul class="subnav">
+                                <li class="nav_choose"> <div onclick="toggleSubnav(this)" class="name-list" style="display: inline-block">Sự kiện <i
+                                        class="fa-solid fa-angle-down"></i></div>
+                                    <ul class="subnav click-subnav">
                                         <li><a href="#">Ưu đãi</a></li>
                                         <li><a href="#">Phim hay tháng</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav_choose">Rạp/Giá vé <i class="fa-solid fa-angle-down"></i>
-                                    <ul class="subnav">
+                                <li class="nav_choose"><div onclick="toggleSubnav(this)" class="name-list" style="display: inline-block">Rạp/Giá vé <i
+                                        class="fa-solid fa-angle-down"></i></div>
+                                    <ul class="subnav click-subnav left">
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
+                                        <li><a href="#">Galaxy Đà Nẵng</a></li>
                                         <li><a href="#">Galaxy Đà Nẵng</a></li>
                                     </ul>
                                 </li>
@@ -97,14 +126,19 @@
             </div>
             <div>
                 <div class="search_login">
+                    <div style="display: flex" class="search-login">
                     <div class="search">
                         <i class="fa-solid fa-magnifying-glass" onclick="toggleInputVisibility(event)"></i>
                     </div>
+                    <div class="click-user">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
                     <a href="#" id="click-login">Đăng nhập</a>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div style="padding: 0 0 40px">
+        <div style="padding: 0 0 40px" class="click-search">
             <input type="text" placeholder="Tìm kiếm..." id="write_input" onclick="expandInput()">
         </div>
     </div>
@@ -392,10 +426,12 @@
 
 <script>
     const checkbox = document.getElementById('check');
+    const header = document.getElementById('header');
     const myElement = document.querySelector('.my-element');
 
     checkbox.addEventListener('change', function () {
         if (this.checked) {
+            header.style.removeProperty('width'); // Xóa thuộc tính width của header
             myElement.style.display = 'block'; // Hiển thị phần tử my-element
         } else {
             myElement.style.display = 'none'; // Ẩn phần tử my-element
@@ -406,6 +442,23 @@
         checkbox.checked = false; // Đặt giá trị của checkbox thành false
         myElement.style.display = 'none'; // Ẩn phần tử my-element
     });
+
+    function toggleSubnav(div) {
+        const parent = div.parentElement;
+        const subnav = parent.querySelector(".click-subnav");
+        const otherSubnavs = parent.parentElement.querySelectorAll(".nav_choose .click-subnav");
+
+        // Xóa class "show" khỏi các subnav khác
+        otherSubnavs.forEach((otherSubnav) => {
+            if (otherSubnav !== subnav) {
+                otherSubnav.classList.remove("show");
+            }
+        });
+
+        // Thêm hoặc xóa class "show" của subnav hiện tại
+        subnav.classList.toggle("show");
+    }
+
 </script>
 
 <!--dropdown-->

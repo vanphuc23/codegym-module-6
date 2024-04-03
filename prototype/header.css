@@ -8,6 +8,10 @@
 
 /*header*/
 
+.menu {
+    width: 50%;
+}
+
 nav {
     display: flex;
     width: 100%;
@@ -34,8 +38,12 @@ nav {
 #nav .nav_choose {
     display: inline-block;
     position: relative;
-    padding: 0 15px;
+    padding: 0 13px;
     font-size: 14px;
+}
+
+.nav_choose .img-responsive {
+    display: none
 }
 
 .nav_choose .search-input {
@@ -54,6 +62,10 @@ nav {
     z-index: 1;
 }
 
+.search_login .click-user {
+    display: none;
+}
+
 #nav .nav_choose .title-list-film .title-subnav {
     padding-top: 10px;
     transition: 0.5s;
@@ -64,7 +76,7 @@ nav {
     padding-right: 5px;
 }
 
-#nav .nav_choose .title-list-film .title-subnav a{
+#nav .nav_choose .title-list-film .title-subnav a {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 18px;
@@ -125,11 +137,7 @@ nav {
     color: orange;
 }
 
-@media(min-width: 1200px) {
-
-    #nav .nav_choose {
-        cursor: pointer;
-    }
+@media (min-width: 1201px) {
 
     #nav .nav_choose .subnav {
         display: none;
@@ -236,7 +244,7 @@ html, body {
 
 .open-menu {
     top: 40px;
-    right: 20px;
+    right: 80px;
     transform: translateY(-50%);
 }
 
@@ -245,8 +253,41 @@ html, body {
     right: 20px;
 }
 
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
     #nav .buy-img {
+        display: none;
+    }
+
+    .click-search {
+        display: none;
+    }
+
+    .search_login .click-user {
+        display: block;
+        transform: scale(1.3);
+        cursor: pointer;
+    }
+
+    .search_login #click-login {
+        margin-left: 10px;
+    }
+
+    .search_login .search-login {
+        cursor: pointer;
+    }
+
+    .search-login:hover #click-login {
+        color: orange;
+    }
+
+    .search_login .search-login {
+        position: absolute;
+        top: 40px;
+        right: 120px;
+        transform: translateY(-50%);
+    }
+
+    .search{
         display: none;
     }
 
@@ -271,12 +312,13 @@ html, body {
         transition: all 0.3s ease-in-out;
     }
 
-    .open-menu, .close-menu {
+    .nav_choose .img-responsive {
         display: block;
+        text-align: center;
     }
 
-    header {
-        width: 60%;
+    .open-menu, .close-menu {
+        display: block;
     }
 
     .menu .nav_choose {
@@ -300,8 +342,9 @@ html, body {
         border: 1px solid #e1e1e1;
     }
 
-    .search-input{
+    .search-input {
         position: relative;
+        margin-bottom: 20px;
     }
 
     .search-button {
@@ -312,10 +355,6 @@ html, body {
         z-index: 2;
     }
 
-    #check:checked ~ .menu {
-        right: 0;
-    }
-
     .dropdown-film {
         list-style-type: none;
     }
@@ -323,7 +362,49 @@ html, body {
     .dropdown-film a {
         text-decoration: none;
         color: black;
+        display: inline-block;
     }
+
+    #check:checked ~ .menu {
+        right: 0;
+    }
+
+    .nav_choose {
+        margin-bottom: 10px;
+    }
+
+    .nav_choose .name-list {
+        cursor: pointer;
+    }
+
+    .click-subnav {
+        display: none;
+    }
+
+    .click-subnav.show {
+        display: block;
+    }
+
+    .option.show .click-subnav{
+        display: block;
+    }
+
+    .left{
+        width: 60%;
+        height: 30%;
+        overflow-y: scroll;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: lightgrey;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: grey;
+        border-radius: 5px;
+    }
+
 }
 
 /*header*/
@@ -353,7 +434,7 @@ html, body {
     width: 100%;
 }
 
-.btn2{
+.btn2 {
     font-size: 60px;
     color: #999;
     position: absolute;
@@ -526,6 +607,20 @@ ul.videos li .video-info .video-name {
     font-weight: bolder;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    ul.videos li .video-top:hover .list-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    ul.videos li .video-top:hover .list-btn {
+        display: none;
+    }
+
+}
+
 /*list*/
 
 /*footer*/
@@ -611,6 +706,22 @@ footer {
     font-size: 14px;
     color: #8d8d8d;
     margin: 0;
+}
+
+@media (max-width: 767px) {
+    .text-footer {
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        gap: 0px 0px;
+    }
+
+    ul.videos li {
+        flex-basis: 50%;
+        padding-right: 30px;
+        margin-bottom: 20px;
+    }
+
 }
 
 /*footer*/
