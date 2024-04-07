@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.container2 {
+    margin: 0 5%;
+}
+
 /*header*/
 
 .menu {
@@ -28,7 +32,7 @@ nav {
 }
 
 #nav {
-    font-size: 13px;
+    font-size: 1rem;
 }
 
 #check {
@@ -39,7 +43,7 @@ nav {
     display: inline-block;
     position: relative;
     padding: 0 13px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .nav_choose .img-responsive {
@@ -79,7 +83,7 @@ nav {
 #nav .nav_choose .title-list-film .title-subnav a {
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: black;
     font-weight: lighter;
     transition: 0.3s;
@@ -169,6 +173,7 @@ nav {
 
     #nav .nav_choose:hover {
         color: orange;
+        cursor: pointer;
     }
 
     #nav .nav_choose .subnav li:hover {
@@ -181,7 +186,7 @@ nav {
 }
 
 .search_login {
-    font-size: 13px;
+    font-size: 1rem;
     padding: 0 0 12px 180px;
     display: flex;
 }
@@ -202,6 +207,7 @@ nav {
     display: none;
     position: absolute;
     right: 15%;
+    padding-left: 20px;
 }
 
 #write_input:focus {
@@ -331,28 +337,33 @@ html, body {
     }
 
     .nav_choose .search-input {
-        display: block;
+        display: flex;
+    }
+
+    .search-input {
+        /*position: relative;*/
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     .search-input .form-search {
         display: block;
         width: 100%;
+        height: 40px;
         border-radius: 10px;
-        padding: 10px 30px;
+        padding-left: 30px;
         border: 1px solid #e1e1e1;
     }
 
-    .search-input {
-        position: relative;
-        margin-bottom: 20px;
+    .search-input .form-search:focus{
+        outline: 1px solid #363949;
+
     }
 
-    .search-button {
-        position: absolute;
-        top: 50%;
-        right: 93%;
-        transform: translateY(-50%);
-        z-index: 2;
+    .search-input .search-button {
+        color: #6e6c6c;
+        margin-left: -99%;
+        transform: translateY(10px);
     }
 
     .dropdown-film {
@@ -391,7 +402,7 @@ html, body {
 
     .left{
         width: 60%;
-        height: 30%;
+        height: 50%;
         overflow-y: scroll;
     }
 
@@ -435,7 +446,7 @@ html, body {
 }
 
 .btn2 {
-    font-size: 60px;
+    font-size: 5rem;
     color: #999;
     position: absolute;
     top: 50%;
@@ -516,8 +527,10 @@ ul.videos {
 
 ul.videos li {
     flex-basis: 25%;
-    padding-right: 30px;
-    margin-bottom: 20px;
+}
+
+.video-item {
+    padding: 20px;
 }
 
 ul.videos li img {
@@ -546,9 +559,6 @@ ul.videos li .video-top .list-btn {
 }
 
 ul.videos li .video-top:hover .list-btn {
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    left: 50%;
     z-index: 0;
 }
 
@@ -559,7 +569,7 @@ ul.videos li .video-top .list-btn a {
     text-decoration: none;
     color: white;
     font-weight: lighter;
-    font-size: 17px;
+    font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -569,17 +579,19 @@ ul.videos li .video-top .list-btn .trailer-click {
     cursor: pointer;
     color: white;
     font-weight: lighter;
-    font-size: 17px;
+    font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
 }
 
 ul.videos li .video-top:hover .list-btn a.buy-click {
     background-color: #f58020;
+    white-space: nowrap;
 }
 
 ul.videos li .video-top:hover .list-btn .trailer-click {
     border: 1px solid white;
+    white-space: nowrap;
 }
 
 ul.videos li .video-top:hover .list-btn .trailer-click:hover {
@@ -603,17 +615,17 @@ ul.videos li .video-info {
 ul.videos li .video-info .video-name {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bolder;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1082px) {
     ul.videos li .video-top:hover .list-btn {
         display: none;
     }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
+@media (max-width: 1082px) and (orientation: landscape) {
 
     ul.videos li .video-top:hover .list-btn {
         display: none;
@@ -626,9 +638,11 @@ ul.videos li .video-info .video-name {
 /*footer*/
 
 footer {
-    min-height: 50vh;
+    height: auto;
     width: 100%;
     background-color: #333333;
+    display: block;
+    overflow: hidden;
 }
 
 .text-footer {
@@ -639,7 +653,7 @@ footer {
 }
 
 .text-footer h3 {
-    font-size: 15px;
+    font-size: 1rem;
     color: #ebf5fc;
 }
 
@@ -659,7 +673,7 @@ footer {
 .text-footer-small li a {
     text-decoration: none;
     color: #c9c9c0;
-    font-size: 14px;
+    font-size: 1rem;
 }
 
 .list-icon-footer {
@@ -673,7 +687,7 @@ footer {
 
 .list-icon-footer li i {
     display: block;
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
     transform: scale(1);
     transition: transform 0.3s ease-in-out;
@@ -696,19 +710,19 @@ footer {
 }
 
 .Footer_footer_bottom .footer_bottom h3 {
-    font-size: 16px;
+    font-size: 1rem;
     color: #cfd0d0;
     font-weight: normal;
     margin: 0;
 }
 
 .Footer_footer_bottom .footer_bottom p {
-    font-size: 14px;
+    font-size: 1rem;
     color: #8d8d8d;
     margin: 0;
 }
 
-@media (min-width: 320px) and (max-width: 980px) {
+@media screen and (max-width: 980px) {
     .text-footer {
         padding: 20px 0;
         display: grid;
@@ -718,8 +732,6 @@ footer {
 
     ul.videos li {
         flex-basis: 50%;
-        padding-right: 30px;
-        margin-bottom: 20px;
     }
 
 }
