@@ -2,89 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slideShow.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous">
-<link rel="stylesheet" href="header.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CNunito:300,300i,400,400i,600,600i,700,700i%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <body>
-<div class="body-slide-show">
-    <div class="slide-show">
-        <div class="list-iamges">
-            <img src="https://cdn.galaxycine.vn/media/2024/3/21/demon-slayer-kimetsu-no-yaiba-on-stage-mugen-train-arc-4-1_1710999294803.jpg"
-                 alt="">
+
+<div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="https://cdn.galaxycine.vn/media/2024/3/21/demon-slayer-kimetsu-no-yaiba-on-stage-mugen-train-arc-4-1_1710999294803.jpg" alt="">
+        </div>
+        <div class="item">
             <img src="https://cdn.galaxycine.vn/media/2024/3/21/gxk-2048_1710996917814.jpg" alt="">
+        </div>
+        <div class="item">
             <img src="https://cdn.galaxycine.vn/media/2024/3/14/sang-den-3_1710397716255.jpg" alt="">
-            <img src="https://cdn.galaxycine.vn/media/2024/2/15/very-happy-day-digital-2048x682_1707987204574.jpg"
-                 alt="">
+        </div>
+        <div class="item">
+            <img src="https://cdn.galaxycine.vn/media/2024/2/15/very-happy-day-digital-2048x682_1707987204574.jpg" alt="">
+        </div>
+        <div class="item">
             <img src="https://cdn.galaxycine.vn/media/2024/2/8/2048x682_1707364876796.jpg" alt="">
         </div>
-        <div class="btns">
-            <div class="btn-left btn2"><i class='bx bx-chevron-left'></i></div>
-            <div class="btn-right btn2"><i class='bx bx-chevron-right'></i></div>
-        </div>
-        <div class="index-images">
-            <div class="index-item index-item-0 active"></div>
-            <div class="index-item index-item-1 "></div>
-            <div class="index-item index-item-2 "></div>
-            <div class="index-item index-item-3 "></div>
-            <div class="index-item index-item-4 "></div>
-        </div>
     </div>
+    <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+    </div>
+    <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-<script>
-    const listImage = document.querySelector('.list-iamges');
-    const imgs = document.getElementsByTagName('img');
-    const btnLeft = document.querySelector('.btn-left');
-    const btnRight = document.querySelector('.btn-right');
-    const length = imgs.length;
-    let current = 0;
 
-    const handleChangeSlide = () => {
-        if (current === length - 1) {
-            current = 0;
-            listImage.style.transform = `translateX(0px)`;
-            document.querySelector('.active').classList.remove('active');
-            document.querySelector('.index-item-'+ current).classList.add('active');
-        } else {
-            current++;
-            let width = imgs[0].offsetWidth;
-            listImage.style.transform = `translateX(${width * -1 * current}px)`;
-            document.querySelector('.active').classList.remove('.active');
-            document.querySelector('.index-item-'+ current).classList.add('.active');
-        }
+<script>
+    let slider = document.querySelector('.slider .list');
+    let items = document.querySelectorAll('.slider .list .item');
+    let next = document.getElementById('next');
+    let prev = document.getElementById('prev');
+    let dots = document.querySelectorAll('.slider .dots li');
+
+    let lengthItems = items.length - 1;
+    let active = 0;
+    next.onclick = function(){
+        active = active + 1 <= lengthItems ? active + 1 : 0;
+        reloadSlider();
+    }
+    prev.onclick = function(){
+        active = active - 1 >= 0 ? active - 1 : lengthItems;
+        reloadSlider();
+    }
+    let refreshInterval = setInterval(()=> {next.click()}, 3000);
+    function reloadSlider(){
+        slider.style.left = -items[active].offsetLeft + 'px';
+        //
+        let last_active_dot = document.querySelector('.slider .dots li.active');
+        last_active_dot.classList.remove('active');
+        dots[active].classList.add('active');
+
+        clearInterval(refreshInterval);
+        refreshInterval = setInterval(()=> {next.click()}, 3000);
+
+
     }
 
-    let handleEventChangeSlide = setInterval(handleChangeSlide, 4000)
-
-    btnRight.addEventListener('click', () => {
-        clearInterval(handleEventChangeSlide);
-        handleChangeSlide();
-        handleEventChangeSlide = setInterval(handleChangeSlide, 4000);
+    dots.forEach((li, key) => {
+        li.addEventListener('click', ()=>{
+            active = key;
+            reloadSlider();
+        })
     })
+    window.onresize = function(event) {
+        reloadSlider();
+    };
 
-    btnLeft.addEventListener('click', () => {
-        clearInterval(handleEventChangeSlide);
-        if (current === 0) {
-            current = length - 1;
-            let width = imgs[0].offsetWidth;
-            listImage.style.transform = `translateX(${width * -1 * current}px)`;
-        } else {
-            current--;
-            let width = imgs[0].offsetWidth;
-            listImage.style.transform = `translateX(${width * -1 * current}px)`;
-        }
-        handleEventChangeSlide = setInterval(handleChangeSlide, 4000)
-    })
 
 </script>
+</body>
 </html>
